@@ -1,0 +1,100 @@
+<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+<script type='text/javascript' scr='data.js'></script>
+<script>
+
+
+//console.log(data1.length);
+ google.charts.load('current', {
+   'packages': ['geochart'],
+   // Note: you will need to get a mapsApiKey for your project.
+   // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+   'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+ });
+ google.charts.setOnLoadCallback(function(){drawMarkersMap(data1)});  //Change this to data1 so that id doesn't conflict with the var for datatable
+
+  function drawMarkersMap(){
+      var data= new google.visualization.arraytoDataTable()[
+      
+     // data.addColumn('number', 'lat');
+     // data.addColumn('number', 'longitude');
+      //data.addColumn('string','name');
+
+      ['lat', 'longitude', 'name', 'acres', 'visitors'],
+      [19.38,-155.2, 'Hawaii Volcanoes', '310,043.96', '1,887,580'],
+    
+  
+            
+      //data.addColumn('number','visitors');
+     // data.addColumn('string','acres');
+     // data.addColumn('number','acres');
+     /* data.addRows([[parseFloat(inputData[0].lat), parseFloat(inputData[0].longitude), inputData[0].name]]); //Added parsefloat to convert to double
+      data.addRows([[parseFloat(inputData[1].lat), parseFloat(inputData[1].longitude), inputData[1].name]]);
+      data.addRows([[parseFloat(inputData[2].lat), parseFloat(inputData[2].longitude), inputData[2].name]]);
+      data.addRows([[parseFloat(inputData[3].lat), parseFloat(inputData[3].longitude), inputData[3].name]]);
+      data.addRows([[parseFloat(inputData[4].lat), parseFloat(inputData[4].longitude), inputData[4].name]]);
+      data.addRows([[parseFloat(inputData[5].lat), parseFloat(inputData[5].longitude), inputData[5].name]]);
+      data.addRows([[parseFloat(inputData[6].lat), parseFloat(inputData[6].longitude), inputData[6].name]]);
+      data.addRows([[parseFloat(inputData[7].lat), parseFloat(inputData[7].longitude), inputData[7].name]]);
+      data.addRows([[parseFloat(inputData[8].lat), parseFloat(inputData[8].longitude), inputData[8].name]]);
+      data.addRows([[parseFloat(inputData[9].lat), parseFloat(inputData[9].longitude), inputData[9].name]]);
+      data.addRows([[parseFloat(inputData[10].lat), parseFloat(inputData[10].longitude), inputData[10].name]]);
+      data.addRows([[parseFloat(inputData[11].lat), parseFloat(inputData[11].longitude), inputData[11].name]]);
+      data.addRows([[parseFloat(inputData[12].lat), parseFloat(inputData[12].longitude), inputData[12].name]]);
+      data.addRows([[parseFloat(inputData[13].lat), parseFloat(inputData[13].longitude), inputData[13].name]]);
+      data.addRows([[parseFloat(inputData[14].lat), parseFloat(inputData[14].longitude), inputData[14].name]]);
+      data.addRows([[parseFloat(inputData[15].lat), parseFloat(inputData[15].longitude), inputData[15].name]]);
+      data.addRows([[parseFloat(inputData[16].lat), parseFloat(inputData[16].longitude), inputData[16].name]]);
+      data.addRows([[parseFloat(inputData[17].lat), parseFloat(inputData[17].longitude), inputData[17].name]]);
+      data.addRows([[parseFloat(inputData[18].lat), parseFloat(inputData[18].longitude), inputData[18].name]]);
+      data.addRows([[parseFloat(inputData[19].lat), parseFloat(inputData[19].longitude), inputData[19].name]]);
+      data.addRows([[parseFloat(inputData[20].lat), parseFloat(inputData[20].longitude), inputData[20].name]]);
+      data.addRows([[parseFloat(inputData[21].lat), parseFloat(inputData[21].longitude), inputData[21].name]]);
+      data.addRows([[parseFloat(inputData[22].lat), parseFloat(inputData[22].longitude), inputData[22].name]]);
+      data.addRows([[parseFloat(inputData[23].lat), parseFloat(inputData[23].longitude), inputData[23].name]]);
+      data.addRows([[parseFloat(inputData[24].lat), parseFloat(inputData[24].longitude), inputData[24].name]]);*/
+
+     // for (var i = 0; i < inputData.length; i++){ //nick helped with this part
+
+          
+      }
+      var options = {
+    region: 'US',
+    displayMode: 'markers',
+    colorAxis: {colors: ['pink']}
+  };
+
+  var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+};
+</script>
+<!--</head>
+<body>-->
+  
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+<script src="data1.js"></script>
+<script>
+   /* declarations
+   var belowonehundredthousand = 0; belowfivehundredthousand = 0;belowonemillion = 0;aboveonemillion = 0;
+   var x;
+   looping structure
+   for (x = 0 data.length; x++){
+       if (data [x].acres < 100,000){
+           belowonehundredthousand + = 1;
+
+       }else if (data [x].acres < 500,000){
+           belowfivehundredthousand + = 1;
+          
+       }  else if (data[x].acres < 1,000,000){
+           belowonemillion + = 1;
+       }
+          else if (data[x].acres > 1,000,000){
+              aboveonemillion + = 1;
+          }
+
+   }
+
+   decision logic
+   data.sort (function(a,b){return a.acres - b.acres})*/
+
+
+</script>
